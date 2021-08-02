@@ -1,0 +1,17 @@
+#   ignore the assets folder, we actually dont need it
+#   since we implemented the svg directly
+#   Also the tests were moved to their respective folders
+#   fuck them
+assets/*
+test/*
+js/templateEngine.js
+
+
+#   dont need config yet
+#   maybe later we implement the login and
+#   save time thing
+#config.cfg
+
+#   files
+
+#   other

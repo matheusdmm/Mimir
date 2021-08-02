@@ -1,0 +1,139 @@
+/* --------------------------------------------------------- */
+/* Things related to lettering and main body things */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: rgb(216, 93, 144);
+    text-align: center;
+    font-size: 50px;
+}
+
+h2 {
+    color: rgb(216, 93, 144);
+    margin-left: 4vw;
+}
+
+p {
+    color: rgb(216, 93, 144);
+}
+
+/* --------------------------------------------------------- */
+/* Things related to the login page */
+.passwordInput .userInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1vw;
+    border: none;
+}
+
+
+.loginButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(216, 93, 144);
+    width: 100%;
+    padding: 1vw;
+    border: none;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.inputFields {
+    position: absolute;
+    top: 30%;
+    left: 43%;
+    transform: translate(-50, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    
+}
+
+/* --------------------------------------------------------- */
+/* Things related to the main video section and movies */
+
+.logo {
+    display: grid;
+    position: fixed;
+    justify-content: center;
+
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    overflow: hidden;
+    scroll-behavior: smooth;
+    margin: 5vh;
+}
+
+.wrapper section {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    margin: 20px 0;
+}
+
+.wrapper section {
+    padding: 0 2px;
+    transition: 250ms all;
+    height: 250px;
+}
+
+.wrapper section .item:hover {
+    margin: 0 40px;
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+
+.wrapper section a {
+    position: absolute;
+    size: 100%;
+    color: rgb(216, 93, 144);
+    text-decoration: none;
+    font-size: 6em;
+    background: rgb(0, 0, 0);
+    width: 80px;
+    padding: 20px;
+    text-align: center;
+    z-index: 1;
+}
+
+.wrapper section a:nth-of-type(1) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.wrapper section a:nth-of-type(2) {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+@media only screen and (max-width: 600px) {
+    a.arrow__btn {
+        display: none;
+    }
+}

@@ -1,0 +1,169 @@
+<!-- 
+    
+    PLAYER PAGE : MIMIR DOMAIN
+
+    BEWARE: Actually uses a different CSS file to style ONLY
+    the player
+
+    The proper use of this instance is:
+    to make a custom script and clone it linking
+    to a specific video file with their propper subtitle
+    when you access it from the main.html 
+
+    this way, you have only one page which links to the
+    desired source and gets away from having a SHITLOAD
+    of the same static file
+
+    YES, i kindly treat MIMIR as a static file because even
+    with all the iteration, you dont actually changes anything here
+    and the overall content basically is the same everytime
+
+--> 
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-screen"> 
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+        <title>MIMIR</title>         
+
+        <!-- PLAYER SPECIFIC CSS -->         
+        <link rel="stylesheet" href="styles/player.css"> 
+    </head>     
+    <body> 
+        <div class="video-container"> 
+
+
+
+            <!-- Back button and Bigger title name -->             
+            <div class="upper-controls"> 
+                <button class="back"> <a href="main.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <line x1="19" y1="12" x2="5" y2="12"></line>                         
+                            <polyline points="12 19 5 12 12 5"></polyline>                         
+                        </svg>      
+                    </a>               
+                </button>                 
+            </div> 
+            
+            <!-- TEST VIDEO FILE TO DEBUG -->             
+            <video src="tests/test.mp4" id="videoSrc"> 
+                
+                <!-- SUBS HANDLER -->                 
+                <track class="subtitles" label="English" kind="subtitles" srclang="en" src="tests/test2.vtt" default/> 
+            </video>             
+            
+                    
+
+            <!-- WATCH BAR -->             
+            <div class="controls-container"> 
+                <div class="progress-controls"> 
+                    <div class="progress-bar"> 
+                        <div class="watched-bar"></div>                         
+                        <div class="playhead"></div>                         
+                    </div>                     
+                    <div class="time-remaining"> 
+                        00:00:00
+                    </div>                     
+                </div>            
+
+                <!-- CONTROLS -->                 
+                <div class="controls"> 
+                    <!-- Play -->                     
+                    <button class="play"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>                         
+                        <svg class="paused" width="24" height="24" viewBox="0 0 24 24"> 
+                            <rect x="6" y="4" width="4" height="16"></rect>                             
+                            <rect x="14" y="4" width="4" height="16"></rect>                             
+                        </svg>                         
+                    </button>    
+
+                    <!-- Rewind -->                     
+                    <button class="rewind"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <polygon points="11 19 2 12 11 5 11 19"></polygon>
+                            <polygon points="22 19 13 12 22 5 22 19"></polygon>
+                        </svg>                         
+                    </button>    
+                 
+                    <!-- Fast Forward -->                     
+                    <button class="fast-forward"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <polygon points="13 19 22 12 13 5 13 19"></polygon>
+                            <polygon points="2 19 11 12 2 5 2 19"></polygon>
+                        </svg>                      
+                    </button>    
+
+                    <!-- Volume -->                     
+                    <button class="volume"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>                         
+                        <svg class="muted" viewBox="0 0 24 24"> 
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>                             
+                            <line x1="23" y1="9" x2="17" y2="15"></line>                             
+                            <line x1="17" y1="9" x2="23" y2="15"></line>                             
+                        </svg>                         
+                    </button>                     
+                    <!-- Source Titles -->                     
+                    <p class="title">  
+                        <span class="title1"> Evangelion: 1.0 </span>  
+                        <span class="title2"> You Are (Not) Alone </span>  </p> 
+                    <!-- In case you need somebody, HELP! -->                     
+                    <button class="help"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>                         
+                    </button>                     
+                    <!-- Skip -->                     
+                    <button class="skip"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                            <line x1="19" y1="5" x2="19" y2="19"></line>
+                        </svg>                         
+                    </button>                     
+                    <!-- Episodes list -->                     
+                    <button class="episodes"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>                         
+                    </button>                     
+                    <!-- Subtitles -->                     
+                    <button class="subtitles"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>                         
+                    </button>                     
+                    <!-- Show in another fuckery instance -->                     
+                    <button class="cast"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" ">
+                            <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path>
+                            <line x1="2" y1="20" x2="2.01" y2="20"></line>
+                        </svg>                         
+                    </button>                     
+                    <!-- Full screen -->                     
+                    <button class="fullscreen"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+                        </svg>                         
+                        <svg class="minimize" viewBox="0 0 24 24"> 
+                            <path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3"> 
+</path>                             
+                        </svg>                         
+                    </button>                     
+                </div>                 
+            </div>             
+        </div>         
+
+        <!-- Calls Freyja -->         
+        <script src="js/freyja.js"></script>    
+
+    </body>     
+</html>
