@@ -1,10 +1,14 @@
 # MIMIR & FREYJA
 ☠ The Wise Localflix ☠
 
+![FUCK YEA](gifs/mimir1.gif)
+
 ## What the ????
 The main intent of this project was to learn how could I possibly use PANDORA as a usefull thing on the weekends. Obviously the correct answer was: BUILD A LOCAL STREAMING PLATFORM to watch my old movies anywhere in my local network.
 
 Basically it creates an web-app that listens to the folder served by Pandora and shows the source in the same format as netflix. 
+
+![FUCK YEA](gifs/mimir2.gif)
 
 ## Tech
 * Plain Vanilla Javascript (because fuck you libraries)
@@ -12,28 +16,20 @@ Basically it creates an web-app that listens to the folder served by Pandora and
 * Feather Icons
 
 ## How it works
-* 
+* Gonna need a local network / server to run it
+* And since we dont have a database yet (and probably would never have), you gonna need to implement and hardcode the videos that you want to watch.
 
-## Funcionalidades
-* Usa um serviço de autenticação básico para entrar no app, provavelmente uma verificação de hash da senha para entrar
+## Funcionality
+- [x] Open and watch video file with native encoding
 
-* abrir ou carregar as legendas
+- [x] Simple menu with all the sources
 
-* abrir ou carregar arquivos de video
+- [x] Fasf forward & rewind KINDA OF
 
-* talvez exibir um menu com os arquivos
+- [ ] save the current time to watch more later
 
-* armazenar configurações em um arquivo .ini ou .cfg?
+- [x] encapsulate all the main files in only one place
 
-* encapsular tudo em um unico arquivo/pasta
-
-* talvez colocar opção para temas de interface/legenda
-
-### Paradas que estou usando por enquanto:
-* 
-
-* 
-
-* 
-
-*  
+- [ ] subtitle load
+- [ ] basic server to run
+- [ ] maybe a simple functional login
