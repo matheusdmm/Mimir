@@ -3,7 +3,7 @@
 #   Also the tests were moved to their respective folders
 #   fuck them
 assets/*
-test/*
+tests/*
 js/templateEngine.js
 
 
