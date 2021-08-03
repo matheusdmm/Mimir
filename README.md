@@ -31,5 +31,17 @@ Basically it creates an web-app that listens to the folder served by Pandora and
 - [x] encapsulate all the main files in only one place
 
 - [ ] subtitle load
-- [ ] basic server to run
+- [x] basic server to run
 - [ ] maybe a simple functional login
+
+#### Bundled with PANDORA
+Now MIMIR cames with PANDORA to run and test/watch your videos.
+Beware, you gonna need Python3.x.
+
+Its gonna run on ```localhost:8040``` unless changed in Pandora.
+
+#### Bugs
+* main page have some misaligned items and the image doesnt cover the whole box
+* Subtitles are loaded but not styled or showed/rendered
+* FF and Rewind are messy and sometimes lags and or aren't even executed properly
+* Mobile view is cluttered
